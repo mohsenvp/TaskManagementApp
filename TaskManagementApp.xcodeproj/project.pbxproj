@@ -24,7 +24,6 @@
 		82E12F282B970EA9008F8D83 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E12F272B970EA9008F8D83 /* CheckBoxView.swift */; };
 		82E12F2A2B970EBE008F8D83 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E12F292B970EBE008F8D83 /* TaskCell.swift */; };
 		82E12F2C2B970EE1008F8D83 /* DateScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E12F2B2B970EE1008F8D83 /* DateScroller.swift */; };
-		82E12F2E2B976151008F8D83 /* DropViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E12F2D2B976151008F8D83 /* DropViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		82E12F272B970EA9008F8D83 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		82E12F292B970EBE008F8D83 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		82E12F2B2B970EE1008F8D83 /* DateScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScroller.swift; sourceTree = "<group>"; };
-		82E12F2D2B976151008F8D83 /* DropViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +173,6 @@
 				82E12F212B970208008F8D83 /* DateHolder.swift */,
 				82E12F232B970E6B008F8D83 /* TaskFilter.swift */,
 				82E12F252B970E83008F8D83 /* TaskItemExtensions.swift */,
-				82E12F2D2B976151008F8D83 /* DropViewDelegate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -320,7 +317,6 @@
 				82E12F1F2B96FA67008F8D83 /* TaskEditView.swift in Sources */,
 				82E12F2A2B970EBE008F8D83 /* TaskCell.swift in Sources */,
 				821F6E912B95BD0700E50D34 /* TaskManagementAppApp.swift in Sources */,
-				82E12F2E2B976151008F8D83 /* DropViewDelegate.swift in Sources */,
 				821F6E9D2B95BD0A00E50D34 /* TaskManagementApp.xcdatamodeld in Sources */,
 				82E12F262B970E83008F8D83 /* TaskItemExtensions.swift in Sources */,
 			);
