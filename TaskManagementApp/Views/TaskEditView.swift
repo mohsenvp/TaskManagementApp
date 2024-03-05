@@ -12,6 +12,7 @@ struct TaskEditView: View
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dateHolder: DateHolder
+    @FetchRequest(sortDescriptors:[]) private var items:FetchedResults<TaskItem>
     
     @State var selectedTaskItem: TaskItem?
     @State var name: String
@@ -88,9 +89,10 @@ struct TaskEditView: View
             
             selectedTaskItem?.created = Date()
             selectedTaskItem?.name = name
+            selectedTaskItem?.desc = desc
             selectedTaskItem?.dueDate = dueDate
             selectedTaskItem?.scheduleTime = scheduleTime
-            
+            selectedTaskItem?.order = (items.last?.order ?? 0) + 1
             dateHolder.saveContext(viewContext)
             self.presentationMode.wrappedValue.dismiss()
         }

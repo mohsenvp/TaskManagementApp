@@ -19,8 +19,13 @@ struct TaskCell: View
             CheckBoxView(passedTaskItem: passedTaskItem)
                 .environmentObject(dateHolder)
             
-            Text(passedTaskItem.name ?? "")
-                .padding(.horizontal)
+            VStack(alignment:.leading) {
+                Text(passedTaskItem.name ?? "")
+                Text(passedTaskItem.desc ?? "")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                    
+            }.padding(.horizontal)
             
             if !passedTaskItem.isCompleted() && passedTaskItem.scheduleTime
             {

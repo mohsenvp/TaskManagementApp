@@ -11,51 +11,38 @@ struct DateScroller: View {
     @EnvironmentObject var dateHolder: DateHolder
     @Environment(\.managedObjectContext) private var viewContext
     
-    var body: some View
-    {
-        HStack
-        {
+    var body: some View{
+        HStack{
             Spacer()
-            Button(action: moveBack)
-            {
+            Button(action: moveBack){
                 Image(systemName: "arrow.left.circle")
-                    .imageScale(.small)
-                    .font(Font.title.weight(.bold))
+                    .imageScale(.large)
             }
             Text(dateFormatted())
                 .font(.title)
-                .bold()
-                .padding(15)
-                .border(.blue)
+                .padding(10)
                 .frame(maxWidth: .infinity)
-            Button(action: moveForward)
-            {
+            Button(action: moveForward){
                 Image(systemName: "arrow.right.circle")
-                    .imageScale(.medium)
-                    .font(Font.title.weight(.bold))
+                    .imageScale(.large)
             }
         }
     }
     
-    func dateFormatted() -> String
-    {
+    func dateFormatted() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd LLL yy"
         return dateFormatter.string(from: dateHolder.date)
     }
     
-    func moveBack()
-    {
-        withAnimation
-        {
+    func moveBack(){
+        withAnimation{
             dateHolder.moveDate(-1, viewContext)
         }
     }
     
-    func moveForward()
-    {
-        withAnimation
-        {
+    func moveForward(){
+        withAnimation{
             dateHolder.moveDate(1, viewContext)
         }
     }
